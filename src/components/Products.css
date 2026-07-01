@@ -1,0 +1,28 @@
+/* ===========================
+   Products Section
+=========================== */
+
+.products {
+  padding: 90px 60px;
+  background: #f8f9fa;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 42px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}

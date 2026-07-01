@@ -1,0 +1,136 @@
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 90vh;
+
+  padding: 120px 60px 80px;
+
+  background: linear-gradient(to right, #ffffff, #fff7f2);
+}
+
+/* ===========================
+   Left Content
+=========================== */
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-tag {
+  color: #ff6b00;
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+  color: #111;
+}
+
+.hero-content h1 span {
+  color: #ff6b00;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #555;
+
+  line-height: 1.8;
+
+  max-width: 550px;
+
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn {
+  background: #ff6b00;
+  color: white;
+
+  border: none;
+
+  padding: 15px 35px;
+
+  border-radius: 40px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 107, 0, 0.35);
+}
+
+.secondary-btn {
+  background: transparent;
+
+  border: 2px solid #ff6b00;
+
+  color: #ff6b00;
+
+  padding: 15px 35px;
+
+  border-radius: 40px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #ff6b00;
+  color: white;
+}
+
+/* ===========================
+   Right Image
+=========================== */
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
