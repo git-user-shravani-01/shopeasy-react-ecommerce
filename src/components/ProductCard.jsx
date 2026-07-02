@@ -1,6 +1,7 @@
 import "./ProductCard.css";
 
 function ProductCard({
+  product,
   image,
   name,
   price,
@@ -8,6 +9,7 @@ function ProductCard({
   rating,
   discount,
   category,
+  addToCart,
 }) {
   return (
     <div className="product-card">
@@ -30,7 +32,7 @@ function ProductCard({
           <span className="price">₹{price}</span>
         </div>
 
-        <button>Add to Cart</button>
+        <button onClick={() => addToCart(product)}>Add to Cart</button>
       </div>
     </div>
   );
