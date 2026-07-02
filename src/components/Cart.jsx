@@ -6,6 +6,23 @@ function Cart({ cart, setCart }) {
     const updatedCart = cart.filter((_, index) => index !== indexToRemove);
     setCart(updatedCart);
   };
+  const increaseQuantity = (id) => {
+    const updatedCart = cart.map((item) =>
+      item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
+    );
+
+    setCart(updatedCart);
+  };
+
+  const decreaseQuantity = (id) => {
+    const updatedCart = cart
+      .map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+      )
+      .filter((item) => item.quantity > 0);
+
+    setCart(updatedCart);
+  };
 
   // Calculate total price
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -26,7 +43,19 @@ function Cart({ cart, setCart }) {
                 <div className="cart-details">
                   <h4>{item.name}</h4>
 
-                  <p>₹{item.price}</p>
+                  <p>₹{item.price} each</p>
+
+                  <div className="quantity-controls">
+                    <button onClick={() => decreaseQuantity(item.id)}>−</button>
+
+                    <span>{item.quantity}</span>
+
+                    <button onClick={() => increaseQuantity(item.id)}>+</button>
+                  </div>
+
+                  <p className="subtotal">
+                    Subtotal: ₹{item.price * item.quantity}
+                  </p>
 
                   <button
                     className="remove-btn"
